@@ -1,11 +1,11 @@
 #NodeJS setup & install dependancy and devdependancy
 
 ###Step-1:
--Craete a file with the name of server.mjs
--Go to https://nodejs.org/en
--.mjs -> module file type
--copy the code from that url then paste it here
--Run the code **node server.mjs**
+-Craete a file with the name of server.mjs.
+-Go to https://nodejs.org/en.
+-.mjs -> module file type.
+-copy the code from that url then paste it here.
+-Run the code **node server.mjs**.
 ##NOTE:
    -Once you run the code then if u will change anything it will wont reflect on the browser 
   so Click ctrl+c then run again.

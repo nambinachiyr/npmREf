@@ -1,8 +1,12 @@
 const controler = {
     index:(req,res)=>{
-    res.json({message:"hello, Controller!"})
-}
+      res.json({message:"hello, Controller!"})
+    },
+    postIndex:(req,res)=>{
+        res.json({message:"This is Post request"})
+    }
 }
 module.exports = {
-    index:controler.index
+    index:controler.index,
+    postIndex:controler.postIndex
 }

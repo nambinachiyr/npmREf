@@ -3,8 +3,8 @@
 const http = require("node:http")
 
 const server = http.createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('hi , hello, text');
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.end('<h1>hi , hello, html</h1>');
 });
 
 // starts a simple http server locally on port 3000

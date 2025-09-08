@@ -1,9 +1,8 @@
 // Create Express
 const express = require('express');
+const { index } = require('./controler');
 //  Create Router Object
 const router = express.Router();
 // Router routes define
-router.get('/',(req,res)=>{
-    res.json({message:"hello, Router!"})
-})
+router.get('/',index)
 module.exports = router;

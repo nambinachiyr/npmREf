@@ -32,11 +32,13 @@
 
 now we can run the code "nodemon server.js"
 ### Step-3:
-   -Then setup node snd nodemon in script package
+
+   -Then setup node and nodemon in script package
    -**"Start":"node server.js","dev":"nodemon server.js"**
    -then **run npm run dev**
 --------------------------------------------------
 
 ## Start the API calls
 
--In first step just test its work in the post man api 
+-In first step just test its work in the post man api using **res.end** Method
+

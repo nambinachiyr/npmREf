@@ -8,7 +8,7 @@ const app = express();
 
 // Define routes
 app.get('/',(req,res)=>{
-  res.send("Hello Express")
+  res.json({message:"Hello Express"})
 })
 
 // Start the server on port 3001

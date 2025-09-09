@@ -50,6 +50,34 @@ const controler = {
       catch(err){
         res.status(500).json({message:"Error creating new todo item"})
       }
+    },
+    updateTodo:async(req,res)=>{
+      try{
+        // Find the ID
+        const todoID = req.params.id
+        // get the data and destructred
+        const { amount,description } = req.body;
+        const createdAt = new Date().toISOString()
+        const todoIndex = notes.findIndex(todo=>todo.id===todoID);
+        if(todoIndex !== -1){
+          if(amount !== undefined){
+            notes[todoIndex].amount = amount
+          }
+          if(description !== undefined){
+            notes[todoIndex].description = description
+          }
+          res.status(201).json({message:"Update successfully !!!",data:notes[todoIndex]})
+        }
+        else{
+           res.status(404).json(
+            {message:`Todo id ${todoID} not update`}
+           )
+        }
+      }
+      catch(err){
+        res.status(500).json({message:"error to update"})
+      }
+
     }
 }
 module.exports = controler;

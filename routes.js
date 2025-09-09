@@ -1,9 +1,11 @@
 // Create Express
 const express = require('express');
-const { index, postIndex } = require('./controler');
+const { getAllTodos } = require('./controler');
+
 //  Create Router Object
 const router = express.Router();
 // Router routes define
-router.get('/',index)
-router.post('/',postIndex)
+router.get('/todos',getAllTodos)
+// router.get('/todos/:id',getTodoById)
+
 module.exports = router;

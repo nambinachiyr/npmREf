@@ -1,12 +1,10 @@
+const notes = require('./data')
 const controler = {
-    index:(req,res)=>{
-      res.json({message:"hello, Controller!"})
+    getAllTodos:(req,res)=>{
+      res.json(notes)
     },
-    postIndex:(req,res)=>{
-        res.json({message:"This is Post request"})
-    }
+    // getTodoById:(req,res)=>{
+    //     const id = res.id
+    // }
 }
-module.exports = {
-    index:controler.index,
-    postIndex:controler.postIndex
-}
+module.exports = controler

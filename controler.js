@@ -24,5 +24,32 @@ const controler = {
         res.status(500).json({message:"Todo is not found"})
       }
     },
+    createNewTodo:async(req,res)=>{
+      try{
+        // console.log(req.body)
+        // Destructrue the contents 
+        const {type,amount} = req.body
+        console.log(amount)
+        // Create new id
+        const newID = parseInt(notes[notes.length-1].id)+1
+        // console.log(newID)
+        const createdAt = new Date().toISOString()
+        // To create the object for comlelete to todo item
+        const newTodo = {
+          createdAt:createdAt,
+          type:type,
+          description:{},
+          amount:amount,          
+          id:newID.toString(),
+        }
+        // Push the newTodo
+       notes.push(newTodo);
+      //  Sent the successful response
+      res.status(201).json({message:"Todo is creared suceessfully!",data:newTodo})
+      }
+      catch(err){
+        res.status(500).json({message:"Error creating new todo item"})
+      }
+    }
 }
 module.exports = controler;

@@ -28,4 +28,4 @@ const notes = [
     "id": "5"
   }
 ]
-module.exports = notes
+module.exports = notes;
